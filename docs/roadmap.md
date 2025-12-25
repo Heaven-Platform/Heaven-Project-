@@ -1,0 +1,290 @@
+<p align="center">
+  <img src="../assets/logo/logo-main.svg" alt="Heaven Project Logo" width="200"/>
+</p>
+
+# Official Whitepaper of the Heaven Project
+
+*Version 1.0 – December 2025*
+
+---
+
+## Table of Contents
+1. Executive Summary
+2. Introduction and Project Philosophy
+3. Tokenomics (HVN Token Economy)
+4. Smart Contract Architecture
+5. Security and Exit Mechanisms
+6. Milestone Rewards
+7. Roadmap and Vision
+8. Security Considerations and Disclaimer
+9. Technical Information and Contracts
+10. Glossary
+11. Distinction from Pyramid Schemes
+
+---
+
+## 🚀 Important Disclaimer and Warning
+**Note: This document is purely a technical description.**
+
+- This whitepaper does not constitute financial, investment, or legal advice.  
+- Interaction with blockchain projects, including the Heaven Project, carries inherent risks and the potential for loss of capital.  
+- The presented model is an activity-based token distribution mechanism and does not guarantee profitability.  
+- All interactions are voluntary, and the responsibility for decision-making lies with the user.  
+- Conduct your own thorough research (DYOR) before any interaction.  
+- This project is not a securities or stock offering.  
+
+---
+
+## 1. Executive Summary
+The Heaven Project is a decentralized finance (DeFi) ecosystem developed on the **Binance Smart Chain (BSC)**.  
+The core of the project is a set of self-executing and immutable smart contracts that pursue three primary objectives:
+
+1. Distribution of the native HVN token through an interactive model based on smart contracts.  
+2. Implementation of a value storage mechanism in the form of a smart contract.  
+3. Establishment of a Decentralized Autonomous Organization (DAO) that ultimately transfers control of the ecosystem to the community of token holders.  
+
+This document serves as a reference, detailing the technical foundations, economic mechanisms, governance structure, and roadmap for the developer and user community.  
+
+---
+
+## 2. Introduction and Project Philosophy
+The Heaven Project is founded on the belief that real value in blockchain ecosystems is created through an active and vested community.  
+The goal is to create a system that automatically and fairly returns a share of the created value directly to its participants.  
+
+### 2.1 Foundational Principles
+- Decentralization: No centralized entity controls the contracts or assets.  
+- Absolute Transparency: All transactions, fund distributions, and allocations are publicly traceable and verifiable on the Binance blockchain.  
+- Fair Distribution: Mechanisms are designed to prevent excessive token concentration (formation of "whales").  
+- Community-Driven Governance: Control of the project is gradually transferred to the community via the DAO.  
+
+### 2.2 Overall Architecture
+This ecosystem consists of four main smart contracts that operate in coordination:
+
+1. Heaven Token Contract: The native token and unit of value for the network.  
+2. Heaven Network Contract: Manages membership, activity registration, and distribution allocations.  
+3. Gift Manager Contract: Supports new users and facilitates targeted gift distribution.  
+4. Heaven DAO Contract: Securely holds assets and executes community governance.  
+
+---
+
+## 3. Tokenomics (HVN Token Economy)
+
+### 3.1 HVN Token Technical Specifications
+- Full Name: Heaven  
+- Symbol: HVN  
+- Standard: BEP-20  
+- Blockchain: Binance Smart Chain (BSC)  
+- Maximum Supply: 100,000,000 (One Hundred Million) units  
+- Re-mintable: No – fixed supply.  
+
+### 3.2 Initial Supply Allocation
+- Strategic Reserve (7%): 7 million tokens for initial liquidity, future collaborations, and holders.  
+- Allocation to the Interactive Ecosystem (93%): 93% of the initial HVN token supply is allocated to the Network Contract to be distributed transparently and automatically based on user interaction with the ecosystem's activities and smart contracts. This process is designed as a decentralized distribution mechanism aimed at creating an active and widespread community.  
+
+### 3.3 Asset Allocation Mechanism
+The goal is to create a stablecoin (USDT) value reserve fund that indirectly supports the ecosystem's stability.  
+
+**Input sources for this reserve include:**  
+- 34% of each user's initial interaction condition (17 USDT out of 50 USDT).  
+- 34% from the transfer parameter in the initial phase.  
+- 5% from users with extensive interaction activity (over 128 registered interactions in the contract).  
+- Other sources such as user status change conditions.  
+
+**Reserve Control:** Assets allocated to this fund are locked in the DAO contract and will only be accessible through the community voting process. Even the initial development team does not have access to these funds.  
+
+[View Tokenomics Infographic](../assets/infographics/tokenomics-infographic.png)
+
+### 3.4 Transfer Parameters in the Initial Phase
+To manage network stability in the initial phase and prevent speculative activities, transferring HVN tokens between wallets is subject to a fixed parameter. This parameter is transferred to the Asset Vault and the DAO contract to support the ecosystem's value. After the initial stages are completed and the DAO is fully activated, the community of token holders can decide on reducing or removing this parameter through the DAO voting process.  
+
+---
+
+## 4. Smart Contract Architecture
+
+### 4.1 Heaven Network Contract
+The Heaven Network Contract is responsible for registering user interactions and distributing allocations based on transparent interaction with the ecosystem. It is designed to maintain balance in network interactions and ensure decentralized and fair distribution of HVN tokens.  
+
+- Initial Interaction Condition: 50 USDT (standard interaction) + 100 USDT optional (to advance to the enhanced interaction level).  
+- Interaction Structure: Model balancing user activity across two parallel branches.  
+- Allocation Mechanism: Based on the level of interaction and activity balance within the network.  
+- Maximum Daily Activity-Based Allocation: Standard Interaction Level: Up to 600 USDT | Enhanced Interaction Level: Up to 1,260 USDT.  
+- Payout Interval: Every 2 hours (by users calling the reward function).  
+- Membership Condition Split: Interactors: 56% | Asset Vault: 34% | Gift Fund: 6% | Development & Maintenance: 4%.  
+
+### 4.2 Gift Manager Contract
+Aims to encourage new users and maintain network dynamism.  
+
+**Conditions to receive a 10 USDT gift:**  
+- At least 60 days have passed since registration.  
+- Having fewer than 5 directly registered users.  
+- Not having previously received a gift or interactive allocation.  
+
+**Activator Incentive:** The user who initiates the gift distribution process receives 2 USDT.  
+
+### 4.3 Heaven DAO Contract
+- Securely holds the assets of the Asset Vault and other reserves.  
+- Enables the definition and execution of Proposals and voting by the HVN token holder community.  
+- Has no centralized access for withdrawing its assets.  
+
+---
+
+## 5. Security and Exit Mechanisms
+
+### 5.1 Regulated Exit Protocol
+This mechanism provides a transparent exit path and is not a market buyback of tokens.  
+
+**Regulated Exit Steps:**  
+1. Time Condition: At least 70 days must have passed since the initial registration date.  
+2. Administrative Fee: Payment of 5 USDT as a status change parameter.  
+3. Balance Calculation: The user's total received amount from the project (allocations) is subtracted from the initial registration amount (50 USDT).  
+4. Final Disbursement: Any positive balance will be deposited into the user's digital wallet within a maximum of 72 hours.  
+
+### 5.2 Network Stability Preservation Algorithms
+- Interaction Level Stabilization Fee: Users who reach a defined interaction level in the contract are required to stabilize their position by paying an additional 50 USDT (25 USDT for enhanced-level users) to continue receiving allocations. These funds are returned to the allocation cycle.  
+- Flags: Users are "flagged" under specific conditions (e.g., receiving a gift or reaching the call allocation limit) to prevent duplicate receipts.  
+
+---
+
+## 6. Milestone Rewards
+
+### 6.1 Philosophy and Purpose
+The Heaven Project believes that healthy network growth results from committed contributors who help create structural balance within the ecosystem.  
+The Milestone Reward system is designed as a complementary incentive mechanism to recognize users who contribute to the qualitative and balanced development of the network.  
+
+**Key Difference from Pyramid Models:**  
+This system focuses on the quality of participation (network balance, sustained activity), not merely on recruitment quantity. Rewards are paid from the token quota allocated to the ecosystem, and their source is predetermined in the smart contract.  
+
+### 6.2 General Mechanism
+Milestone Rewards are distributed based on structural achievements within the network, including qualitative metrics such as:
+
+- Creating balance in the user's network structure.  
+- Balanced development of sub-branches.  
+- Sustained and qualitative participation in the ecosystem.  
+
+These rewards complement daily activity income and have a defined cumulative cap.  
+
+### 6.3 Transparency and Control
+- All Milestone Reward payments are traceable on the blockchain.  
+- A maximum cap of 20,000 HVN per user is set.  
+- Distribution of these rewards is solely from the tokens allocated to the ecosystem in the smart contract.  
+- In the future, the parameters of this system can be revised by the DAO through community governance.  
+
+### 6.4 Distinction from Pyramid Schemes
+
+| Feature        | Heaven Project                          | Pyramid Schemes              |
+|----------------|-----------------------------------------|------------------------------|
+| Source of Value| Token with utility in the ecosystem     | Cash from new users          |
+| Primary Focus  | Quality and network balance             | Quantity and recruitment only|
+| Income Cap     | Yes                                     | No                           |
+| Dependency     | On multiple qualitative metrics         | Only on new recruitment      |
+
+**Important Note:** This aspect of the project does not guarantee income in any way, and participation is only possible by accepting the inherent risks of blockchain.  
+
+---
+
+## 7. Roadmap and Vision
+The Heaven Project roadmap is designed as follows:  
+
+**Start Date:** July 2025  
+
+### Phase 0: Foundation and Design
+- Timeline: July 2025  
+- Key Goals: Conceptual design and project base architecture.  
+
+### Phase 1: Development and Deployment
+- Timeline: August – September 2025  
+- Key Goals: Development, testing, and security auditing of smart contracts. Deployment of the HVN token.  
+
+### Phase 2: Launch and Initial Offering
+- Timeline: November 2025  
+- Key Goals: Website launch and activation of public registration in the Network Contract.  
+
+### Phase 3: Ecosystem Development and Increased Interaction
+- Timeline: November 2025 – November 2027  
+- Key Goals: Distribution of HVN tokens through ecosystem interaction and achievement of milestones. Initial development and testing of the DAO.  
+
+### Phase 4: Decentralized Governance and Advanced Interactive Mechanisms
+- Timeline: From November 2027 onwards  
+- Key Goals: Full transfer of control to the community via the DAO. Initiation of advanced financial services like staking and lending, and integration with GameFi and charitable ecosystems. 
+
+[View Roadmap Infographic](../assets/infographics/roadmap-infographic.png) 
+
+**Important Note:** After distributing 50% of the tokens and the Asset Vault reaching a desirable level, the DAO can vote to enable staking of the fund's assets in reputable protocols (such as PancakeSwap or Venus) so that the generated yield is transparently distributed among the community.  
+
+---
+
+## 8. Security Considerations and Disclaimer
+1. Security Audits: Smart contracts are reviewed by specialized teams before final deployment, and any security modifications will be communicated through transparent processes.  
+2. Transparency: All contract code and transaction history are publicly viewable and verifiable on the BscScan explorer.  
+3. Inherent Risks: Users must be aware of risks related to blockchain technology, smart contracts, market volatility, and interactive models.  
+4. No Profit Guarantee: This document and the project itself do not offer any guarantees or promises of profitability. Past performance is not indicative of future results.  
+5. No Mandatory ROI Model: This project does not have any pyramid structure or promise guaranteed returns. Allocations are based on user interaction with smart contracts and predefined blockchain mechanisms.  
+6. Informational Use Only: This whitepaper is solely a technical and informational document and does not have any aspect of an invitation to purchase or invest.  
+
+---
+
+## 9. Technical Information and Contracts
+
+### 9.1 Public Access Links
+### 9.1 Public Access Links
+- **Main project code repository on GitHub:**  
+  [Heaven Project Repository](https://github.com/hvndao/Heaven-Project-)
+
+- **License file (LICENSE.md):**  
+  [LICENSE.md](https://github.com/hvndao/Heaven-Project-/blob/main/LICENSE.md)
+
+- **Whitepaper file (whitepaper.md):**  
+  [Whitepaper (Markdown)](https://github.com/hvndao/Heaven-Project-/blob/main/docs/whitepaper.md)
+
+- **Website:**  
+  [heavenplatform.net](https://heavenplatform.net)
+
+### 9.2 Smart Contract Addresses on BSC
+Addresses of the main project contracts on BSC:  
+
+- HVN Token Address (BEP-20): `0xc661F013eA29AC57463FFEA2DEB241bF6C0Aff61`  
+  - View on BscScan: https://bscscan.com/token/0xc661F013eA29AC57463FFEA2DEB241bF6C0Aff61  
+- Heaven Network Contract: `0xa988616F4209D116552F16A835074D4A42111dBF`  
+  - View on BscScan: https://bscscan.com/address/0xa988616F4209D116552F16A835074D4A42111dBF  
+- DAO Contract: `0x8d44255bA3826823c07A78c9F65980B88F28afc2`  
+  - View on BscScan: https://bscscan.com/address/0x8d44255bA3826823c07A78c9F65980B88F28afc2  
+- Gift Manager Contract: `0xD5988DFDB613c76bADe1022f7842CAf6AcF8514d`  
+  - View on BscScan: https://bscscan.com/address/0xD5988DFDB613c76bADe1022f7842CAf6AcF8514d  
+
+### 9.3 Guide to Reviewing Contracts on BscScan
+BscScan is the official blockchain explorer for Binance Smart Chain, allowing you to transparently view and track all transactions, smart contracts, and address balances.  
+
+**To review the Heaven Project contracts:**  
+1. Go to the website [bscscan.com](https://bscscan.com).  
+2. Copy and paste any of the contract addresses above into the search bar.  
+3. On the opened page, you can view details such as token balance, all incoming and outgoing transactions, contract source code, and activity history.  
+
+**Important Note:** Any updates to versions and supplementary technical documentation will be announced through the project's official documentation repository on GitHub and the announcement website.  
+
+---
+
+## 10. Glossary
+- **BSC (Binance Smart Chain):** The blockchain network on which the project is deployed.  
+- **DAO (Decentralized Autonomous Organization):** The ultimate governance structure that transfers project control to the community.  
+- **DeFi (Decentralized Finance):** Ecosystem of decentralized financial services based on smart contracts.  
+- **Interactive Activity Index:** A metric of user activity in the contract calculated based on registered interactions.  
+- **Transaction Initiator:** A user who calls the allocation payout function in the Network Contract.  
+- **Development Checkpoints:** Milestones and progress stages in the network accompanied by HVN token allocation.  
+- **Asset Vault:** A stablecoin (USDT) reserve created to support the ecosystem.  
+- **BscScan:** Blockchain explorer for reviewing and tracking all activities on the BSC network.  
+
+---
+
+## 11. Distinction from Pyramid Schemes
+- No Guaranteed Profit: Payments are based on real activity within the network.  
+- Real Added Value: A DeFi ecosystem with real-world applications.  
+- Not Solely Dependent on Recruitment: Diverse participation mechanisms.  
+- Complete Transparency: All transactions are traceable on the blockchain.  
+- Decentralized Ownership: Ultimate control lies with the DAO, not the founders.  
+
+---
+
+© 2025 Heaven Project.  
+This document is published for informational and technical purposes. Any use with attribution is permitted.  
+This whitepaper is published under the Heaven Project Whitepaper License (refer to the LICENSE.md file in the GitHub repository).  
+This whitepaper is purely technical and has no promotional aspect or invitation to purchase.
